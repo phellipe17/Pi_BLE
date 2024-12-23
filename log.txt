@@ -1,0 +1,465 @@
+Connected to Bluetooth device.
+Listing available services and characteristics...
+Service: a0340001-b5a3-f393-e0a9-e50e24dcca9e
+  Characteristic: a0340005-b5a3-f393-e0a9-e50e24dcca9e
+  Characteristic: a0340003-b5a3-f393-e0a9-e50e24dcca9e
+  Characteristic: a0340002-b5a3-f393-e0a9-e50e24dcca9e
+  Characteristic: a0340004-b5a3-f393-e0a9-e50e24dcca9e
+Service: 00001801-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a05-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002b2a-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002b29-0000-1000-8000-00805f9b34fb
+Service: 0000fee5-0000-1000-8000-00805f9b34fb
+  Characteristic: 0000feb5-0000-1000-8000-00805f9b34fb
+  Characteristic: 0000feb6-0000-1000-8000-00805f9b34fb
+Service: 0000180a-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a28-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a25-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a23-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a26-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a27-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a50-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a29-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a2a-0000-1000-8000-00805f9b34fb
+  Characteristic: 00002a24-0000-1000-8000-00805f9b34fb
+Service: 00002600-0000-1000-8000-00805f9b34fb
+  Characteristic: 00007000-0000-1000-8000-00805f9b34fb
+  Characteristic: 00007001-0000-1000-8000-00805f9b34fb
+Starting key exchange...
+Received data: 42 54 11 01 89 00 B3 00 51 02 A4 4D 00 00 00 00 00 00 00 00
+Key exchange response detected.
+Extracted public key bytes: bytearray(b'Q\x02\xa4M')
+Unknown data identifier.
+Terminal public key received.
+AES key derived successfully. shared_secret length: 6 bytes aes_key length: 16 bytes
+Encrypted IMEI packet: 425422028bf5aecf311b0a59a3c686f198959d77
+Encrypted IMEI sent for authentication.
+Waiting for further commands or notifications. Press Ctrl+C to exit.
+Received data: 42 54 55 05 20 20 3F AA 03 41 71 15 40 5E 17 95 C8 6C 8F 97
+aes_key: 3a60432a5c01211f291e18dbbd8698b6
+Encrypted data: 20 20 3F AA 03 41 71 15 40 5E 17 95 C8 6C 8F 97
+Decrypted data: 89 03 B3 01 00 00 00 00 00 00 00 00 00 00 00 00
+Unknown data identifier.
+Received data: 42 54 5A 01 3D 34 36 40 D1 54 5E 42 B3 17 2D 9F EF CB 04 12
+OBD data response detected.
+Decrypted data: B3 00 01 00 06 00 00 00 00 00 00 00 00 00 00 00
+OBD Data Length: 1
+Invalid message type
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Received data: 42 54 5A 01 6C 0B 42 5C 89 4B 0C 7B 4B 0B E8 27 B4 24 E2 72 BE BC 1E 40 60 6A DD AA 86 23 F1 16 CE 8F 6B B8 CF FB 91 7C 66 0F A2 27 25 A0 63 FC 70 5A 55 52 5C 74 38 AD 4F 7A D0 A3 CD 25 17 D5 55 1A AC 5A
+OBD data response detected.
+Decrypted data: B3 07 38 00 F0 24 06 20 12 12 12 00 01 01 0A F0 04 02 12 FA FE F1 02 FF FF FE C1 04 0B 1B 67 14 E0 04 01 0F F0 03 01 FF FE EE 01 77 FE FC 01 FA E0 03 01 00 EE F1 01 00 E0 02 01 FF 00 00 00 00
+OBD Data Length: 56
+LOOP
+Engine Speed: 607.25 rpm
+Wheel-Based Vehicle Speed: 255.99609375 km/h
+High Resolution Total Vehicle Distance: 931726.18 km
+Engine Torque Mode: 15 
+Engine Percent Load at Current Speed: 255 %
+Engine Coolant Temperature: 79 ºC
+Fuel Level 1: 100.0 %
+Accelerator Pedal Position 1: 0.0 %
+PTO Governor State: 0 
+Actual Engine Percent Torque: 130 %
+---
+Attempting to reconnect... (1/5)
