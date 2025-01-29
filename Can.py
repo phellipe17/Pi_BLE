@@ -6,6 +6,7 @@ from Crypto.Cipher import AES
 from Crypto.Util.Padding import pad, unpad
 import binascii
 import struct
+from asyncio import Queue
 
 
 # Device address and characteristics
@@ -72,6 +73,81 @@ DATA_TABLE ={
 # Store the received public key
 terminal_public_key_bytes = None
 aes_key = None
+data_queue = Queue()
+
+async def receive_notification2(client, sender, data):
+    global terminal_public_key_bytes
+    global aes_key
+    if data[:4] == b'\x42\x54\x55\x05':
+        print(f"aes_key: {aes_key.hex()}")
+        # decrypt the data using the derived AES key
+        encrypted_data = data[4:]
+        if len(encrypted_data) != AES.block_size:
+            print(f"Error: Encrypted data length {len(encrypted_data)} is not 16 bytes.")
+            return
+        print("Encrypted data:", " ".join(f"{b:02X}" for b in encrypted_data))
+        decrypted_data = decrypt_data(encrypted_data, aes_key)
+        print(f"Decrypted data:", " ".join(f"{b:02X}" for b in decrypted_data))
+
+    if data[:4] == b'\x42\x54\x11\x01':  # Key exchange response identifier
+        print("Key exchange response detected.")
+        terminal_public_key_bytes = data[8:12]  # Only 4 bytes for the public key as per protocol
+        print(f"Extracted public key bytes: {terminal_public_key_bytes}")
+        
+    if data[:4] == b'\x42\x54\x5a\x01':  # OBD data response identifier
+        print("OBD data response detected.")
+        # get the data in chunks of 16 bytes and decrypt all of them
+        encrypted_data = data[4:]
+        if len(encrypted_data) % AES.block_size != 0:
+            print(f"Error: Encrypted data length {len(encrypted_data)} is not a multiple of 16 bytes.")
+            return
+        # Processa cada bloco de 16 bytes
+        decrypted_data = b""
+        for i in range(0, len(encrypted_data), AES.block_size):
+            chunk = encrypted_data[i:i + AES.block_size]
+            decrypted_data += decrypt_data(chunk, aes_key)
+
+        # Mostra os dados decriptados
+        print("Decrypted data:", " ".join(f"{b:02X}" for b in decrypted_data))
+
+        #Chama a nova função parse_obd_data
+        parsed_data = parse_obd_data(decrypted_data)
+        for key, value in parsed_data.items():
+            unit = next((info["unit"] for pid, info in DATA_TABLE.items() if info["name"] == key), "")
+            print(f"{key}: {value} {unit}")
+        print("---")
+        
+    else:
+        # Coloca os dados recebidos na fila para processamento posterior
+        await data_queue.put(data)
+        print("Dados recebidos colocados na fila.")
+
+async def process_data():
+    global aes_key
+    while True:
+        data = await data_queue.get()  # Aguarda novos dados na fila
+        print("Processando dados...")
+        try:
+            # Processa os dados como antes
+            if data[:4] == b'\x42\x54\x5a\x01':  # Identificador de dados OBD
+                encrypted_data = data[4:]
+                if len(encrypted_data) % AES.block_size != 0:
+                    print(f"Erro: comprimento dos dados criptografados {len(encrypted_data)} não é múltiplo de 16 bytes.")
+                    continue
+                
+                decrypted_data = b""
+                for i in range(0, len(encrypted_data), AES.block_size):
+                    chunk = encrypted_data[i:i + AES.block_size]
+                    decrypted_data += decrypt_data(chunk, aes_key)
+
+                # Parse dos dados
+                parsed_data = parse_obd_data(decrypted_data)
+                for key, value in parsed_data.items():
+                    unit = next((info["unit"] for pid, info in DATA_TABLE.items() if info["name"] == key), "")
+                    print(f"{key}: {value} {unit}")
+                print("---")
+        except Exception as e:
+            print(f"Erro ao processar dados: {e}")
 
 
 def generate_ecdh_keys():
@@ -190,8 +266,10 @@ def parse_obd_data(data):
 # Função para gerenciar desconexões
 async def reconnect(client, retries=MAX_RETRIES):
     for attempt in range(retries):
+        if client.is_connected:
+            print("Client is already connected. Skipping reconnection.")
+            return True
         print(f"Attempting to reconnect... ({attempt + 1}/{retries})")
-        await asyncio.sleep(2)
         try:
             await client.connect()
             if client.is_connected:
@@ -276,29 +354,37 @@ async def main():
 
     async with BleakClient(DEVICE_ADDRESS, disconnected_callback=lambda client: asyncio.create_task(reconnect(client))) as client:
         print("Connected to Bluetooth device.")
-    
+
+        # Start the data processing task
+        asyncio.create_task(process_data())
+
         await asyncio.sleep(2)
         print("Listing available services and characteristics...")
         for service in client.services:
             print(f"Service: {service.uuid}")
             for char in service.characteristics:
                 print(f"  Characteristic: {char.uuid}")
+        
         # Start notifications
-        await client.start_notify(CHAR_UUID_NOTIFY, lambda sender, data: asyncio.create_task(receive_notification(client, sender, data)))
+        await client.start_notify(CHAR_UUID_NOTIFY, lambda sender, data: asyncio.create_task(receive_notification2(client, sender, data)))
+                
         # await client.start_notify(CHAR_UUID_NOTIFY_LOG, receive_notification)
         # Key exchange
-        print("Starting key exchange...")
+        print("Starting key exchange...") 
         private_key, public_key_bytes = generate_ecdh_keys()
         await send_data(client, CHAR_UUID_WRITE, bytes([0x42, 0x54, 0x11, 0x01, 0x89, 0x00, 0xC2, 0x00]) + public_key_bytes + bytes([0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00]))
         # Wait for terminal's public key notification
-        for _ in range(10):
+        for _ in range(20):
             await asyncio.sleep(1)
             if terminal_public_key_bytes:
-                print("Terminal public key received.")
+                print(f"Terminal public key received. {terminal_public_key_bytes}")
                 break
         else:
             print("Failed to receive terminal public key.")
             return
+        
+        
+        
         # Derive the AES key
         try:
             shared_secret = derive_custom_shared_secret(private_key, terminal_public_key_bytes)
