@@ -7,7 +7,8 @@ from Crypto.Util.Padding import pad, unpad
 import asyncio
 
 # Device address and characteristics
-DEVICE_ADDRESS = "CB:59:2E:9F:76:11"
+# DEVICE_ADDRESS = "CB:59:2E:9F:76:11"
+DEVICE_ADDRESS = 'C4:A8:28:3F:4F:41'
 CHAR_UUID_WRITE = "feb5"
 CHAR_UUID_NOTIFY = "feb6"
 BASE_AES_KEY = bytes([0x3A, 0x60, 0x43, 0x2A, 0x5C, 0x01, 0x21, 0x1F, 0x29, 0x1E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00])
@@ -51,6 +52,8 @@ async def process_data():
             for i in range(0, len(encrypted_data), AES.block_size):
                 chunk = encrypted_data[i:i+AES.block_size]
                 decrypted_data += decrypt_data(chunk, aes_key)
+
+            print(f"Decrypted data: {decrypted_data.hex()}")
 
             parsed_data = parse_obd_data(decrypted_data)
             for key, value in parsed_data.items():
