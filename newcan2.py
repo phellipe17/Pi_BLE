@@ -7,8 +7,10 @@ from Crypto.Util.Padding import pad, unpad
 
 # --- Global Constants and Dictionaries ---
 
-CHAR_UUID_WRITE = "feb5"
-CHAR_UUID_NOTIFY = "feb6"
+# CHAR_UUID_WRITE = "feb5"
+# CHAR_UUID_NOTIFY = "feb6"
+CHAR_UUID_WRITE = "0000feb5-0000-1000-8000-00805f9b34fb"
+CHAR_UUID_NOTIFY = "0000feb6-0000-1000-8000-00805f9b34fb"
 BASE_AES_KEY = bytes([
     0x3A, 0x60, 0x43, 0x2A, 0x5C, 0x01, 0x21, 0x1F,
     0x29, 0x1E, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
